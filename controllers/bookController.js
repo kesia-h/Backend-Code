@@ -16,8 +16,8 @@ export const createBook = async (req, res) =>{
         });
     }catch(e){
         console.log(e);
-        res.status(500).json({
-            error: "Internal Server Error"
+        res.status(e.statusCode).json({
+            error: e.message
         });
     }
 }
@@ -35,8 +35,8 @@ export const editBook = async (req, res) =>{
         });
     }catch(e){
         console.log(e);
-        res.status(500).json({
-            error: "Internal Server Error"
+        res.status(e.statusCode).json({
+            error: e.message
         });
     }
 }
@@ -52,8 +52,8 @@ export const deleteBook = async (req, res) =>{
         });
     }catch(e){
         console.log(e);
-        res.status(500).json({
-            error: "Internal Server Error"
+        res.status(e.statusCode).json({
+            error: e.message
         });
     }
 }
